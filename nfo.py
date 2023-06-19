@@ -37,6 +37,10 @@ def generate_nfo(f_name: str, nfo_type: any([NFOType.movie, NFOType.tv, NFOType.
         landscape = f'<thumb aspect="landscape">{detail.get("backdrop_path")[1:]}</thumb>'
         landscape = et.fromstring(landscape)
         root.append(landscape)
+        
+        fanart = f'<thumb aspect="fanart">{detail.get("backdrop_path")[1:]}</thumb>'
+        fanart = et.fromstring(fanart)
+        root.append(fanart)
 
     if detail.get("poster_path"):
         poster = f'<thumb aspect="poster">{detail.get("poster_path")[1:]}</thumb>'

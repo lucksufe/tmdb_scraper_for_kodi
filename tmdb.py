@@ -8,7 +8,8 @@ def api(api_type: any([API.tv, API.movie]), search_key: str, language: any([Lang
     response = requests.get(url, headers=headers)
     if response.status_code == 200:
         info = response.json()
-        info["genre"] = get_genre_str(info.get("genre_ids"), api_type, language)
+        for single in info["results"]:
+            single["genre"] = get_genre_str(single.get("genre_ids"), api_type, language)
         return info
     return {}
 
