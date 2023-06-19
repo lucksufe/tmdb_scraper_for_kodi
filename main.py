@@ -31,8 +31,10 @@ def deal_with_episode(episode_file, info):
 
 
 if __name__ == "__main__":
-    # deal_with_movie(movie_file=r"E:\aliyun\新建文件夹\test\[BeanSub&FZSD][Jigokuraku][11][GB][1080P][x264_AAC].mp4", search_key="阿甘正传", language=Language.zh)
-    deal_with_tv(tv_dir_path=r"\\192.168.31.183\公共空间\动漫\一拳超人", search_key="一拳超人", language=Language.zh)
+    # deal_with_movie(movie_file=r"\\192.168.31.183\公共空间\动漫\命运之夜 天之杯 系列\命运之夜—天之杯Ⅰ恶兆之花.mp4", search_key="命运之夜—天之杯Ⅰ恶兆之花", language=Language.zh)
+    deal_with_movie(movie_file=r"\\192.168.31.183\公共空间\动漫\命运之夜 天之杯 系列\命运之夜—天之杯Ⅱ 失去之蝶.mp4", search_key="命运之夜—天之杯Ⅱ 失去之蝶", language=Language.zh)
+    deal_with_movie(movie_file=r"\\192.168.31.183\公共空间\动漫\命运之夜 天之杯 系列\命运之夜—天之杯Ⅲ 春之歌.mp4", search_key="命运之夜—天之杯Ⅲ 春之歌", language=Language.zh)
+    # deal_with_tv(tv_dir_path=r"\\192.168.31.183\公共空间\动漫\一拳超人", search_key="一拳超人", language=Language.zh)
     # import sys
     # from optparse import OptionParser
 

@@ -20,8 +20,10 @@ def generate_nfo(f_name: str, nfo_type: any([NFOType.movie, NFOType.tv, NFOType.
     plot = et.SubElement(root, 'plot')
     plot.text = detail.get("overview")
 
-    genre = et.SubElement(root, 'genre')
-    genre.text = detail.get("genre")
+    genre_str_list = detail.get("genre").split("&")
+    for genre_str in genre_str_list:
+        genre = et.SubElement(root, 'genre')
+        genre.text = genre_str
 
     premiered = et.SubElement(root, 'premiered')
     premiered.text = detail.get("release_date") if nfo_type == NFOType.movie else detail.get("first_air_date")
